@@ -38,3 +38,4 @@ out/
 
 ### application-security.properties ###
 application-security.properties
+src/main/resources/application.properties
