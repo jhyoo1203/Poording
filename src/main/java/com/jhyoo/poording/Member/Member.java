@@ -1,13 +1,31 @@
-package com.jhyoo.poording.Domain;
+package com.jhyoo.poording.Member;
 
 public class Member {
 
+    private Long memberId;
     private String id;
     private String pw;
     private String email;
     private String phonenum;
     private int regdate;
 
+
+    public Member(Long memberId, String id, String pw, String email, String phonenum, int regdate) {
+        this.memberId = memberId;
+        this.id = id;
+        this.pw = pw;
+        this.email = email;
+        this.phonenum = phonenum;
+        this.regdate = regdate;
+    }
+
+    public Long getMemberId() {
+        return this.memberId;
+    }
+
+    public void setMemberId(Long memberId) {
+        this.memberId = memberId;
+    }
 
     public String getId() {
         return this.id;

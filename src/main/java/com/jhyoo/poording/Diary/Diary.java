@@ -1,4 +1,4 @@
-package com.jhyoo.poording.Domain;
+package com.jhyoo.poording.Diary;
 
 public class Diary {
 
@@ -11,11 +11,21 @@ public class Diary {
     private int deletedate;
 
 
+    public Diary(Long diaryId, String writer, String title, String content, int regdate, int updatedate, int deletedate) {
+        this.diaryId = diaryId;
+        this.writer = writer;
+        this.title = title;
+        this.content = content;
+        this.regdate = regdate;
+        this.updatedate = updatedate;
+        this.deletedate = deletedate;
+    }
+
     public Long getDiaryId() {
         return this.diaryId;
     }
 
-    public void setDiary_id(Long diaryId) {
+    public void setDiaryid(Long diaryId) {
         this.diaryId = diaryId;
     }
 

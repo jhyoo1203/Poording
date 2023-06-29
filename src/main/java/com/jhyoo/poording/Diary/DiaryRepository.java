@@ -1,9 +1,7 @@
-package com.jhyoo.poording.Repository;
+package com.jhyoo.poording.Diary;
 
 import java.util.List;
 import java.util.Optional;
-
-import com.jhyoo.poording.Domain.Diary;
 
 public interface DiaryRepository {
     Diary save(Diary diary);

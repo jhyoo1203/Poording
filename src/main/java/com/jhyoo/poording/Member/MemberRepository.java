@@ -1,13 +1,11 @@
-package com.jhyoo.poording.Repository;
+package com.jhyoo.poording.Member;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.jhyoo.poording.Domain.Member;
-
 public interface MemberRepository {
     Member save(Member member);
+    Optional<Member> findBymemberId(Long memberId);
     Optional<Member> findById(String Id);
-    Optional<Member> findByEmail(String Email);
     List<Member> findAll();
 }

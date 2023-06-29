@@ -17,16 +17,13 @@ ALTER TABLE diary COMMENT '다이어리에 관한 테이블';
 -- board Table Create SQL
 CREATE TABLE member
 (
+    `member_id`  INT             NOT NULL    COMMENT '멤버ID',
     `id`         VARCHAR(50)     NOT NULL    COMMENT '아이디', 
     `pw`         VARCHAR(100)    NOT NULL    COMMENT '비밀번호', 
     `email`      VARCHAR(100)    NOT NULL    COMMENT '이메일', 
     `phone_num`  VARCHAR(45)     NOT NULL    COMMENT '휴대전화', 
     `regdate`    DATETIME        NOT NULL    COMMENT '가입일자', 
-     PRIMARY KEY (id)
+     PRIMARY KEY (member_id)
 );
 
 ALTER TABLE member COMMENT '회원에 관한 테이블';
-
-ALTER TABLE member
-    ADD CONSTRAINT FK_member_id_diary_writer FOREIGN KEY (id)
-        REFERENCES diary (writer) ON DELETE RESTRICT ON UPDATE RESTRICT;
